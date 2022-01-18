@@ -1,0 +1,55 @@
+.menuButton{
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: .3s;
+    z-index: 500000;
+}
+
+.menuButton div{
+    height: 1.3px;
+    width: 50%;
+    background: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+
+
+.menuButton div:nth-last-of-type(1){
+    transform: translate(-50%, -10px);
+    transform-origin: 0% 50%;
+}
+
+.menuButton div:nth-last-of-type(3){
+    transform: translate(-50%, 10px);
+    transform-origin: 0 50%;
+}
+
+.menuButton.active{
+    transform: rotate(90deg);
+}
+
+
+.menuButton.active div:nth-of-type(2){
+    opacity: 0; 
+}
+
+.menuButton.active div:nth-of-type(1){
+    transform: rotate(45deg) translate(-50%, 0%);
+    
+}
+
+.menuButton.active div:nth-of-type(3){
+    transform: rotate(-45deg) translate(-50%, 0%);
+    
+}
+
+.header-nav.active{
+    transform:translate(0% , 10%);
+}
